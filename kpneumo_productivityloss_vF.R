@@ -11,7 +11,7 @@ library(triangle)
 library(xlsx)
 
 
-setwd('/Users/isabellaimpalli/Library/CloudStorage/OneDrive-CenterforDiseaseDynamics,Economics&Policy/AMR Vaccines CDC IPA')
+setwd('/Users/XXX')
 
 set.seed(123)
 
