@@ -2,7 +2,7 @@
 
 library(metafor)
 
-setwd('/Users/isabellaimpalli/Library/CloudStorage/OneDrive-CenterforDiseaseDynamics,Economics&Policy/AMR Vaccines CDC IPA')
+setwd('/Users/XXX')
 
 ########################## HOSPITAL LENGTH OF STAY #############################
 
