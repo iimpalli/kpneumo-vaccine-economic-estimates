@@ -8,8 +8,8 @@ library(tidyr)
 library(stringr)
 library(xlsx)
 
+# set the wd to a folder which has the folder Code in it, which houses the InputData and OtherData folders
 setwd('/Users/XXX')
-
 
 ################################# IMPORT DATA ##################################
 
