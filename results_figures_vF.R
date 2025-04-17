@@ -23,20 +23,27 @@ setwd('/Users/XXX')
     mutate(pop = as.numeric(pop))
 
 ## societal cost dfs
+# societal costs are the combined totals of medical expenditures and productivity losses
   # baseline (VE = 70%)
   baseline_sc = read_excel('Code/OtherData/baseline_societalcost.xlsx') %>% select(-`...1`) %>%
-    left_join(population, by = "iso3")
+    left_join(population, by = "iso3") %>% 
+    # adjust to 2024$
+    mutate(across(matches("^(prod|med|soc)"), ~ . * 1.158))
   # VE = 50%
   fifty_sc = read_excel('Code/OtherData/fifty_societalcost.xlsx') %>% select(-`...1`) %>%
-    left_join(population, by = "iso3")
+    left_join(population, by = "iso3") %>% 
+    # adjust to 2024$
+    mutate(across(matches("^(prod|med|soc)"), ~ . * 1.158))
 
 ## monetized DALY dfs
   # baseline (VE = 70%)
   baseline_daly = read_excel('Code/OtherData/baseline_monetizedDALYs.xlsx') %>% select(-`...1`) %>%
-    left_join(population, by = "iso3")
+    left_join(population, by = "iso3") %>% 
+    mutate(across(matches("^(mon)"), ~ . * 1.158))
   # VE = 50%
   fifty_daly = read_excel('Code/OtherData/fifty_monetizedDALYs.xlsx') %>% select(-`...1`) %>%
-    left_join(population, by = "iso3")
+    left_join(population, by = "iso3") %>% 
+    mutate(across(matches("^(mon)"), ~ . * 1.158))
   
 ## other standard definitions
   names = c("baseline", "fifty")
