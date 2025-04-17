@@ -11,9 +11,12 @@ library(rriskDistributions)
 library(triangle)
 library(xlsx)
 
+# set the wd to a folder which has the folder Code in it, which houses the InputData and OtherData folders
 setwd('/Users/XXX')
 
 set.seed(123)
+
+# calculate the medical expenditures in 2021US$ - will be transferred to 2024US$ in the results script
 
 ################################# IMPORT DATA ##################################
 
@@ -66,7 +69,7 @@ set.seed(123)
       left_join(hosp_cost, by = c("code", "country_name")) %>%
       left_join(PPP, by = "country_name") %>%
       left_join(LCU_conversion, by = "iso3") %>%
-      # replace Cuba and Venezuela with avg of the region
+      # replace Cuba and Venezuela with avg of the region since those were blank
       group_by(region) %>%
       mutate(LCU_USD = ifelse(country_name == "Cuba" | country_name == "Venezuela", 
                               mean(LCU_USD, na.rm = TRUE), LCU_USD)) %>%
