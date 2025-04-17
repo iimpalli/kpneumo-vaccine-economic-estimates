@@ -11,6 +11,10 @@ library(xlsx)
 # set the wd to a folder which has the folder Code in it, which houses the InputData and OtherData folders
 setwd('/Users/XXX')
 
+# societal cost is a script which combines the productivity loss and medical expenditures
+# into a single number called societal costs, which is used for plotting and any
+# combined totals
+
 ################################# IMPORT DATA ##################################
 
 # productivity loss due to time spent in hospital
