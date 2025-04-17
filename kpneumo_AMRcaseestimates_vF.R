@@ -11,9 +11,12 @@ library(xlsx)
 library(rriskDistributions)
 library(triangle)
 
+# set wd to a directory which has a folder called Code that houses the InputData and OtherData folders
 setwd('/Users/XXX')
 
 set.seed(123)
+
+# create estimates for the AMR cases and send those excels back to the Input Data folder
 
 ################################# IMPORT DATA ##################################
 
