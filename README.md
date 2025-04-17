@@ -1,6 +1,6 @@
 # kpneumo-vaccine-economic-estimates
 
-This repository contains all of the input data and code for the manuscript "Evaluating the potential impact of a maternal Klebsiella pneumoniae vaccine: estimates for 107 low- and middle-income countries" by Impalli et al.
+This repository contains all of the input data and code for the manuscript "Economic Impact of a Maternal Klebsiella pneumoniae Vaccine: Estimates for 107 Low- and Middle-Income Countries" by Impalli et al.
 
 Some notes:
 meta-analysis_vF.R was used to calculate the parameter distribution for the length of hospital stay, and the result was hard coded into kpneumo_medexp_vF.R.
